@@ -1,7 +1,8 @@
 # Uses 2010 rates
-med_rate=16
-med=49445.0
-factor=2.0
+med_rate = 16
+med = 49445.0
+factor = 2.0
+cap = 50.0
 
 # Income brackets source: http://www.census.gov/hhes/www/cpstables/032011/hhinc/new06_000.htm
 nums = [4176,5055,7061,7260,6937,6730,6148,5907,5624,4933,5088,4203,4412,3579,3769,3118,3143,2680,2516,2110,2498,1778,1782,1480,1470,1243,1236,1058,974,783,983,671,636,541,555,472,464,335,358,290,2143,2484]
@@ -14,7 +15,7 @@ nums.each_with_index do |num,index|
   per_of_median = means[index]/med
   per_of_median = ((per_of_median - 1) / factor ) + 1 if per_of_median > 1
   rate = per_of_median * med_rate
-  rate = 50.0 if rate > 50
+  rate = cap if rate > cap
   per_house = means[index] * (rate/100)
   bracket_total = per_house * households
   revenues << bracket_total
