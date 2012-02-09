@@ -1,0 +1,3 @@
+SlidingTax is a hypothetical sliding tax system, based off median household income. The system is designed to help ensure a fair distribution of tax burden by mathematically attaching it to percentages of median household income. This system is designed to be used with a 0% corporate tax, and with capital gains being taxed at the same rate as the rest of your income.
+
+Being that this system was designed by programmers (and not economists) we're sure that there are a whole hosts of problems that we don't see, so that's why we made this site, to share it with others, allow people to fiddle with the distribution of tax burden and see how it compares to revenues right now. Hopefuly it will contribute something meaningful to the national discussion about tax reform.
