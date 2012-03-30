@@ -1,5 +1,48 @@
+# Mac OS X
+.DS_Store
+
+# TextMate
+*.tmproj
+tmtags
+
+# emails
+*~
+\#*
+.\#*
+
+# vim
+*.swp
+
+# General
+coverage
+rdoc
+doc
+log
+.yardoc
+nohup.out
+
+# Bundler
+*.gem
 .bundle
+Gemfile.lock
+pkg
+*.gem
+
+# Rubinius
+*.rbc
+
+# Extensions
+Makefile
+*.o
+*.so
+*.bundle
+mkmf.log
+
+# Rails
 db/*.sqlite3
 log/*.log
 tmp/
-.sass-cache/
+webrat.log
+.sass_cache
+
+# App Specific
