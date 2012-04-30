@@ -1,0 +1,20 @@
+/* ...
+*= require_self
+*= require_tree .
+*/
+
+body {
+  background-color: #82CAFA;
+}
+
+.mainpanel {
+  background-color: #E0FFFF;
+  padding: 15px;
+}
+
+.round_corners {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px;
+}
