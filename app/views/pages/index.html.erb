@@ -1,18 +1,40 @@
-<div class="results">
-  <span id="total_revenue"></span>
-</div>
-<div class="settings">
+<div class="settings panel round_corners grid_3 alpha">
   <div class="n_value">
     <input type="range" min="0.1" max="4.01" step="0.1" value="2.0" onchange="showNValue(this.value)"></input><br />
     <span>N Value = <span id="range_value">2.0</span></span>
   </div>
   <br />
   <div class="tax_rate">
-    <input type="textfield" value="16"></input><br />
-    <span>Median Income Tax Rate</span>
-  </div>
+    <input type="textfield" id="med_rate" value="16" onchange="calculate()"></input><br />
+    <span>Median Tax Rate</span>
+  </div><br />
   <div class="tax_cap">
-    <input type="textfield" value="50"></input><br />
+    <input type="textfield" id="cap" value="50" onchange="calculate()"></input><br />
     <span>Tax Rate Cap</span>
+  </div>
+</div>
+<div class="results panel round_corners grid_12 omega">
+  <div class="totals">
+    <span id="total_revenue" class="failure">$0</span>
+  </div>
+  <div class="brackets">
+    <table class="brackets" border="0">
+      <thead>
+        <tr class="odd_row">
+          <th>#</th>
+          <th>Median Income</th>
+          <th>Tax Rate</th>
+          <th>Burden</th>
+        </tr>
+        <% @means.each_with_index do |mean, index| %>
+        <tr class="<%=(index%2).even? ? "even_row" : "odd_row" %>">
+          <td><%= index+1 %></td>
+          <td><%= number_with_delimiter mean, :delimiter => ',' %></td>
+          <td id="rate_<%=index%>">&nbsp;</td>
+          <td id="burden_<%=index%>">&nbsp;</td>
+        </tr>
+        <% end %>
+      </thead>
+    </table>
   </div>
 </div>

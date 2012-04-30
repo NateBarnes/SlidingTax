@@ -7,9 +7,17 @@ body {
   background-color: #82CAFA;
 }
 
-.mainpanel {
+.panel {
   background-color: #E0FFFF;
   padding: 15px;
+}
+
+.failure {
+  color: red;
+}
+
+.success {
+  color: green;
 }
 
 .round_corners {
@@ -17,4 +25,25 @@ body {
   -webkit-border-radius: 15px;
   -khtml-border-radius: 15px;
   border-radius: 15px;
+}
+
+#total_revenue {
+  font-size: 32px;
+}
+
+div.totals {
+  margin-bottom: 20px;
+}
+
+table.brackets {
+  width: 100%;
+  align: left ;
+  
+  tr.even_row {
+    
+  }
+  
+  tr.odd_row {
+    background-color: #82CAFA;
+  }
 }
