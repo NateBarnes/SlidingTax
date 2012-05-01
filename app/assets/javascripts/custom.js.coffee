@@ -7,6 +7,7 @@ total = 0
 factor = 2.0
 med_rate = 16
 cap = 50
+personal = 49445.0
 
 window.showNValue = (newValue) ->
   factor = parseFloat(newValue).toFixed(1)
@@ -36,13 +37,22 @@ window.calculate = ->
     $("#total_revenue").addClass("success")
   else
     $("#total_revenue").removeClass("success")
+  per_of_median = personal/med
+  per_of_median = ((per_of_median - 1) / factor ) + 1 if per_of_median > 1
+  rate = per_of_median * med_rate
+  rate = cap if rate > cap
+  $("#personal_rate").html(rate.toFixed(4).toString()+"%")
   true
   
 window.gatherNums = ->
   factor = parseFloat($("#range_value").html())
   med_rate = parseFloat($("#med_rate").val())
+  personal = parseFloat($("#personal_income").val())
   cap = parseFloat($("#cap").val())
   if cap > 50
     $("#cap").val("50")
     cap = 50
   true
+  
+window.onload = ->
+  calculate()

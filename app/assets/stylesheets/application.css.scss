@@ -12,6 +12,10 @@ body {
   padding: 15px;
 }
 
+.no_underline {
+  text-decoration: none;
+}
+
 .failure {
   color: red;
 }
@@ -27,8 +31,44 @@ body {
   border-radius: 15px;
 }
 
+div.side_header {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 #total_revenue {
   font-size: 32px;
+}
+
+div.settings {
+  text-align: center;
+}
+
+div.personal {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#personal_rate {
+  font-size: 32px;
+}
+
+.about {
+  font-family: Gill Sans, Verdana;
+  font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+a.about {
+  text-decoration: none;
+}
+
+div.top {
+  margin-bottom: 15px;
 }
 
 div.totals {

@@ -8,10 +8,15 @@
 </head>
 <body>
   <div class="container_16">
-    <div class="grid_16">
-      Logo
+    <div class="top">
+      <div class="grid_15">
+        <%= link_to "Logo", "/", :class => "no_underline" %>
+      </div>
+      <div class="grid_1 about">
+        <%= link_to "About", "/about", :class => "no_underline" %>
+      </div>
+      <div class="clear"></div>
     </div>
-    <div class="clear"></div>
     <div class="grid_16">
       <%= yield %>
     </div>
