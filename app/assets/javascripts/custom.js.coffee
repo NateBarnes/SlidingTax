@@ -5,7 +5,7 @@ med = 49445.0
 burdens = []
 total = 0
 factor = 2.0
-med_rate = 16
+med_rate = 16.2594
 cap = 50
 personal = 49445.0
 
