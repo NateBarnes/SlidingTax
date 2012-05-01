@@ -7,7 +7,7 @@ total = 0
 factor = 2.0
 med_rate = 16.2594
 cap = 50
-personal = 49445.0
+personal = 50000.0
 
 window.showNValue = (newValue) ->
   factor = parseFloat(newValue).toFixed(1)
