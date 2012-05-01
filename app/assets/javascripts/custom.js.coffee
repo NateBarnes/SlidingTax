@@ -42,6 +42,10 @@ window.calculate = ->
   rate = per_of_median * med_rate
   rate = cap if rate > cap
   $("#personal_rate").html(rate.toFixed(4).toString()+"%")
+  if total < current_revenues
+    $("#total_footer").html("The plan must raise <span class='failure'>$"+(current_revenues-total).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"</span> more to be revenue neutral.")
+  else
+    $("#total_footer").html("You've raised an additional <span class='success'>$"+(total-current_revenues).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"</span> to pay down the deficit")
   true
   
 window.gatherNums = ->
