@@ -24,7 +24,6 @@ nohup.out
 # Bundler
 *.gem
 .bundle
-Gemfile.lock
 pkg
 *.gem
 
