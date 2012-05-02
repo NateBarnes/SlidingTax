@@ -9,10 +9,11 @@
 <body>
   <div class="container_16">
     <div class="top">
-      <div class="grid_15">
-        <%= link_to "Logo", "/", :class => "no_underline" %>
+      <div class="grid_1">&nbsp;</div>
+      <div class="grid_13">
+        <div class="logo"><%= link_to "SlidingTax", "/", :class => "no_underline" %></div>
       </div>
-      <div class="grid_1 about">
+      <div class="grid_2 about">
         <%= link_to "About", "/about", :class => "no_underline" %>
       </div>
       <div class="clear"></div>
@@ -20,6 +21,11 @@
     <div class="grid_16">
       <%= yield %>
     </div>
+    <div class="clear"></div>
+    <div class="grid_16">
+      
+    </div>
+    <div class="clear"></div>
   </div>
 </body>
 </html>
