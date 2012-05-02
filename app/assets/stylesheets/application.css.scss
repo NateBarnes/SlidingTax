@@ -8,11 +8,11 @@ body {
 }
 
 .logo {
-  -webkit-transform: rotate(15deg) scale(1.25, 0.5);
-  -moz-transform: rotate(15deg) scale(1.25, 0.5);
-  -ms-transform: rotate(15deg) scale(1.25, 0.5);
-  transform: rotate(15deg) scale(1.25, 0.5);
-  margin-top: 100px;
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+  margin-top: 80px;
   margin-bottom: -40px;
   font-size: 70px;
 }
